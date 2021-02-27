@@ -1,0 +1,295 @@
+body {
+  color: #40514E;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h2,
+h3,
+.overlay-text {
+  font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  margin: 40px 0;
+}
+
+/* color section */
+.colored-section {
+  background-color: #fcf8e8;
+}
+
+.top-container {
+  background-color: #E4F9F5;
+  position: relative;
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.body-text {
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* top background section */
+.top-name {
+  color: #66BFBF;
+  font-size: 5.625rem;
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+}
+
+.top-intro {
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+}
+
+.mountain {
+  width: auto;
+}
+
+/* profile section */
+.profile-image {
+  border: solid 20px #fcf8e8;
+  border-radius: 80%;
+  max-width: 240px;
+}
+
+.big-titles {
+  color: #66BFBF;
+  font-size: 3rem;
+  margin: 1%;
+  padding-top: 2%;
+}
+
+.big-titles-intro {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+
+.titles {
+  font-size: 1.5rem;
+  color: #11999E;
+  text-align: left;
+}
+
+/* Abilities Section */
+.logos {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.logos li {
+  margin: 10px;
+}
+
+.logos li>img {
+  width: 90px;
+}
+
+.logos li>img:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+/* practice section */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Create four equal columns that sits next to each other */
+.practice-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 12px;
+  justify-content: center;
+}
+
+.pictures-container {
+  position: relative;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.pictures-container img {
+  box-shadow: 10px 10px 10px 0px rgb(0 0 0 / 50%);
+  transition-duration: .25s;
+  max-width: 100%;
+}
+
+.pictures-overlay {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .3s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  font-size: 2em;
+}
+
+.pictures-overlay i {
+  position: relative;
+  float: right;
+  cursor: pointer;
+  margin: 5px;
+  color: lightgray;
+}
+
+.pictures-overlay i:hover {
+  color: #fff;
+}
+
+.overlay-text {
+  position: relative;
+  margin: 48px auto;
+}
+
+.overlay-text p {
+  font-size: 16px;
+}
+
+/* when hover the image, overlay shows up and the shadow dispear */
+.pictures-container:hover .pictures-overlay {
+  opacity: 0.9;
+}
+
+.pictures-container:hover img {
+  box-shadow: none;
+}
+
+/* === practice section ==== END */
+
+/* contact section */
+.bottom-background {
+  background-color: #66BFBF;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.contact-title {
+  color: white;
+  margin: 5% auto;
+}
+
+.footer-link {
+  color: #11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #EAF6F6;
+  text-decoration: none;
+}
+
+.copyright {
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 40px 0;
+}
+/* slide up animation */
+.slide-up{
+  animation: slideup 1s;
+}
+@keyframes slideup{
+  0%{
+    padding-top: 100px;
+    opacity: 0;
+  }
+  100%{
+    padding-top: 0;
+    opacity: 1;
+  }
+}
+
+/* when device screen smaller than 992px */
+@media (max-width: 992px) {
+  .mountain {
+    width: 50%;
+  }
+
+  .profile-image {
+    max-width: 200px;
+  }
+
+  .body-text,
+  .titles {
+    text-align: center;
+  }
+
+  .practice-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* when device screen smaller than 768px */
+@media only screen and (max-width: 768px) {
+  .mountain {
+    width: 50%;
+  }
+
+  .top-cloud {
+    width: 20%;
+    right: 30px;
+  }
+
+  .bottom-cloud {
+    width: 20%;
+    left: 30px;
+  }
+
+  .footer-link {
+    margin: 5px 5px;
+  }
+
+  .practice-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
