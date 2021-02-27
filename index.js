@@ -11,7 +11,7 @@ function addSlideUp() {
     let ableRect = ability.getBoundingClientRect().top;
 
     //
-    if (y >= profileRect) {
+    if (y >= profileRect/2) {
         profile.classList.add("slide-up");
     } else {
         profile.classList.remove("slide-up");

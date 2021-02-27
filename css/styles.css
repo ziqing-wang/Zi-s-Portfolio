@@ -6,12 +6,12 @@ body {
 
 html {
   scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h2,
@@ -31,21 +31,15 @@ hr {
   background-color: #fcf8e8;
 }
 
+#top-section {
+  height: 100vh;
+}
+
 .top-container {
   background-color: #E4F9F5;
   position: relative;
   padding-top: 100px;
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 40px;
-}
-
-.body-text {
-  text-align: left;
-  line-height: 1.5;
+  height: 100%;
 }
 
 /* top background section */
@@ -75,7 +69,20 @@ hr {
 }
 
 .mountain {
+  position: relative;
+  bottom: 0;
   width: auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.body-text {
+  text-align: left;
+  line-height: 1.5;
 }
 
 /* profile section */
@@ -232,16 +239,19 @@ hr {
   font-size: 0.75rem;
   padding: 40px 0;
 }
+
 /* slide up animation */
-.slide-up{
+.slide-up {
   animation: slideup 1s;
 }
-@keyframes slideup{
-  0%{
+
+@keyframes slideup {
+  0% {
     padding-top: 100px;
     opacity: 0;
   }
-  100%{
+
+  100% {
     padding-top: 0;
     opacity: 1;
   }
