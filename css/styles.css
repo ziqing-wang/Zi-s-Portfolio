@@ -118,14 +118,17 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+ 
 }
 
 .logos li {
   margin: 10px;
+  
 }
 
 .logos li>img {
   width: 90px;
+  transition: all 0.5s ease;
 }
 
 .logos li>img:hover {
